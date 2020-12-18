@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <title>Kernel Website</title>
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Desarrollado por Ing. Paul Jiménez Vela">
 
     <!-- mobile specific metas
     ================================================== -->
@@ -35,6 +35,156 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:700,400');
+
+body{
+background-color: #000000;
+font-family: 'Open Sans', sans-serif;
+}
+#container-cards{
+position: absolute;
+width: 100%;
+height: 100%;
+
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+.container-card{
+position: relative;
+margin: 20px 10px;
+}
+.card{
+position: relative;
+width: 300px;
+height: 400px;
+border-radius: 10px;
+box-shadow: 0 -5px 7px rgba(0,0,0,.1);
+overflow: hidden;
+background-color: #fff;
+}
+.image-box{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+z-index: 2;
+transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out
+}
+.image-box img{
+transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+z-index: 3;
+display: flex;
+margin: 0;
+padding: 0;
+
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+
+}
+.social-icons li{
+list-style: none;
+}
+.social-icons li a{
+
+position: relative;
+display: block;
+background-color: white;
+width: 35px;
+height: 40px;
+line-height: 30px;
+border-radius: 50px;
+padding: 5px;
+margin: 0 5px;
+color: #262626;
+font-size: 20px;
+text-align: center;
+cursor: pointer;
+opacity: 0;
+
+left: 50%;
+-ms-transform: translate(-50%);
+-webkit-transform: translate(-50%);
+transform: translate(-50%);
+-ms-transform: translateY(160px);
+-webkit-transform: translateY(160px);
+transform: translateY(160px);
+transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-webkit-transition: all .2s ease-in-out
+}
+.social-icons li a .fa{
+transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-webkit-transition: all .5s ease-in-out
+}
+.social-icons li a:hover .fa{
+transform: rotateX(360deg);
+}
+
+/* DETAILS */
+.card-details{
+position: absolute;
+width: 100%;
+text-align: center;
+bottom: 1px;
+}
+.card-details h1{
+font-size: 21px;
+font-weight: 500;
+color: #464646;
+}
+.card-details h1 span{
+font-size: 14px;
+font-weight: 400;
+color: #ccc;
+}
+/* HOVER ACTIONS */
+.card:hover .image-box img{
+opacity: 0.5;
+}
+.card:hover .image-box{
+top: -75px;
+}
+.card:hover .social-icons li a{
+-ms-transform: translateY(0);
+-webkit-transform: translateY(0);
+transform: translateY(0);
+opacity: 1;
+}
+.card:hover .social-icons li:nth-child(1) a{
+transition-delay: 0s;
+}
+.card:hover .social-icons li:nth-child(2) a{
+transition-delay: 0.1s;
+}
+.card:hover .social-icons li:nth-child(3) a{
+transition-delay: 0.2s;
+}
+.card:hover .social-icons li:nth-child(4) a{
+transition-delay: 0.3s;
+}
+.card:hover .social-icons li:nth-child(5) a{
+transition-delay: 0.4s;
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <body id="top">
 
@@ -164,20 +314,20 @@
         <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
                 
             <div class="col-block stats__col ">
-                <div class="stats__count">2500</div>
-                <h5>Tazas de Café</h5>
+                <div class="stats__count">13148</div>
+                <h5>Horas de Trabajo</h5>
             </div>
             <div class="col-block stats__col">
-                <div class="stats__count">7</div>
+                <div class="stats__count">9</div>
                 <h5>Alianzas</h5>
             </div>
             <div class="col-block stats__col">
-                <div class="stats__count">111</div>
+                <div class="stats__count">150</div>
                 <h5>Alumnos Felices</h5> 
             </div>
             <div class="col-block stats__col">
-                <div class="stats__count">8765</div>
-                <h5>Horas de Trabajo</h5>
+                <div class="stats__count">3750</div>
+                <h5>Tazas de Café</h5>
             </div>
 
         </div> <!-- end about-stats -->
@@ -295,15 +445,15 @@
                     <br>
                     <br>
                     <h3 class="subhead">Nuestro Trabajo</h3>
-                    <h1 class="display-2 display-2--light">Amamos lo que hacemos. <br> Observa un poco del trabajo más reciente.</h1>
+                    <h1 class="display-2 display-2--light">Amamos lo que hacemos. <br> Observa un poco de nuestro trabajo más reciente.</h1>
                 </div>
             </div> <!-- end section-header -->
 
             <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
 
-                <!-- SnapWidgetv2 -->
-<script src="https://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="https://snapwidget.com/embed/832194" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+                <!-- SnapWidget -->
+                <script src="https://snapwidget.com/js/snapwidget.js"></script>
+                <iframe src="https://snapwidget.com/embed/832194" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
 
             </div>
 
@@ -313,7 +463,8 @@
 
                 <br>
 
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'>                <iframe align='center' src='https://open.spotify.com/embed/playlist/4a17xmuYrYWAMxCpU9LWl8' width='1000' height='500' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe></div>
+                <iframe align="center" src="https://open.spotify.com/embed/playlist/4a17xmuYrYWAMxCpU9LWl8" width="1000" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
             </div>
             
         </div> <!-- end intro-wrap -->
@@ -414,121 +565,181 @@
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-                <h3 class="subhead">Contáctanos</h3>
-                <h1 class="display-2 display-2--light">Busca postularte o simplemente salúdanos.</h1>
+                <h3 class="subhead">Equipo</h3>
+                <h1 class="display-2 display-2--light">Conócenos y busca postularte, o simplemente salúdanos.</h1>
             </div>
         </div>
 
         <div class="row contact-content" data-aos="fade-up">
-            
-            <div class="contact-primary">
 
-                <h3 class="h6">Ubícanos</h3>
+            <div id="container-cards">
 
-                <div>
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.35975907945!2d-98.21872068523427!3d19.047913757804828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0d43ac38fdd%3A0x11c9a212dd40214f!2sUPAEP!5e0!3m2!1ses-419!2smx!4v1590618640603!5m2!1ses-419!2smx' width='560' height='900' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe></div>                </div>
-
-            </div> <!-- end contact-primary -->
-
-            <div class="contact-secondary">
-                <div class="contact-info">
-
-                    <h3 class="h6 hide-on-fullwidth">Información de Contacto</h3>
-
-                    <div class="cinfo">
-                        <br>
-                        <h5>Paul Jiménez Vela</h5>
-                        <p>
-                            Presidente<br>
-                            paul.jimenez01@upaep.edu.mx<br>
-                        </p>
-                        <ul class="contact-social">
-                            <li>
-                                <a href="https://www.facebook.com/paul.vela.11"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/paulvelaaa"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/paulvelaa"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/paulvelaa"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                            </li>
-                        </ul> <!-- end contact-social -->
+                <div class="container-card">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images/presi.jpg">
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <div class="card-details">
+                            <h1>Paul Jiménez Vela<br><span>Presidente Fundador</span></h1>
+                        </div>
                     </div>
-
-                    <div class="cinfo">
-                        <h5>Juan Carlos Benítez Fernández</h5>
-                        <p>
-                            Vicepresidente
-                            juancarlos.benitez@upaep.edu.m<br>
-                        </p>
-                        <ul class="contact-social">
-                            <li>
-                                <a href="https://www.facebook.com/dampledhaloodst"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/BennyTheMistah"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/bennybenitez9"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                        </ul> <!-- end contact-social -->
+                </div>
+        
+                <div class="container-card">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images/vp.jpg">
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <div class="card-details">
+                            <h1>Félix Garduza Gutiérrez<br><span>Vicepresidente</span></h1>
+                            
+                        </div>
                     </div>
-
-                    <div class="cinfo">
-                        <h5>Félix Garduza Gutiérrez</h5>
-                        <p>
-                            Secretario General<br>
-                            felix.garduza@upaep.edu.mx <br>
-                        </p>
-                        <ul class="contact-social">
-                            <li>
-                                <a href="https://www.facebook.com/felix.garduzagutierrez"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/felix_gg99"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                        </ul> <!-- end contact-social -->
+                </div>
+        
+                <div class="container-card">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images/IMG-1909.jpg">
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <div class="card-details">
+                            <h1>Fernanda Alvarado Sotelo<br><span>Secretaria General</span></h1>
+                        </div>
                     </div>
-
-                    <div class="cinfo">
-                        <h5>Álvaro Arce Robles</h5>
-                        <p>
-                            Tesorero<br>
-                            alvaro.arce@upaep.edu.mx <br>
-                        </p>
-                        <ul class="contact-social">
-                            <li>
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </li>
-                        </ul> <!-- end contact-social -->
+                </div>
+        
+                <div class="container-card">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images/arce.jpg">
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <div class="card-details">
+                            <h1>Álvaro Arce Robles<br><span>Tesorero</span></h1>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="cinfo">
-                        <h5>Sé el primero en conocer nuestros eventos <a href="https://calendar.google.com/calendar/embed?src=upaep.edu.mx_vmok6rvb641lpr2fo3d81925e4%40group.calendar.google.com&ctz=America%2FMexico_City
-                            ">aquí.</a></h5>
+                <div class="container-card">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images/cu.jpg">
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <div class="card-details">
+                            <h1>Mauricio Gallegos Arroyo<br><span>Vocal de Consejo Universitario y Embajador</span></h1>
+                        </div>
                     </div>
-                    
-
+                </div>
+                <div class="container-card">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images/paco.jpg">
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <div class="card-details">
+                            <h1>Francisco Moreno Juárez<br><span>Vocal de Semestre</span></h1>
+                        </div>
                     </div>
-
-
-                </div> <!-- end contact-info -->
-            </div> <!-- end contact-secondary -->
+                </div>
+                <div class="container-card">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="images/marco.jpg">
+                        </div>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <div class="card-details">
+                            <h1>Marco A. Aguilar del Razo<br><span>Vocal de Vida Universitaria</span></h1>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
 
         </div> <!-- end contact-content -->
 
      </section> <!-- end s-contact -->
 
-    <!-- footer
-    ================================================== -->
-    <footer>
-
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     
+     <footer>
         <div class="row footer-bottom">
             <br>
             <br>
@@ -539,54 +750,11 @@
                 </div>
 
                 <br>
-                <br>
-                <br>
                 
                 <span>Desarrollado por: <a href="https://www.linkedin.com/in/paulvelaa/">Paúl J. Vela</a> </span>
-
+    
         </div> <!-- end footer-bottom -->
-    </footer> <!-- end footer -->
-
-
-    <!-- photoswipe background
-    ================================================== -->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
-                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
-                    "Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
-                "Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-
-        </div>
-
-    </div> <!-- end photoSwipe background -->
-
+     </footer>
 
     <!-- preloader
     ================================================== -->
@@ -601,7 +769,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Java Script
     ================================================== -->
